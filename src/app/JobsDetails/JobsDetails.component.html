@@ -1,0 +1,12 @@
+<div class="card" *ngFor = "let job of jobs">
+  <div *ngIf= "job.id == paramsId">
+    <div class="card-header">
+      {{job.title}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{job.company}}</h5>
+      <p class="card-text">{{job.salary}}₼</p>
+      <a routerLink = "/edit-details/{{job.id}}" class="btn btn-warning">Edit</a>
+    </div>
+  </div>
+</div>

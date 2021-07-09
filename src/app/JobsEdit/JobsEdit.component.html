@@ -1,0 +1,22 @@
+<div class="w-100 h-100 d-flex justify-content-center align-items-center" *ngFor = "let job of jobs">
+  <div class="w-25" *ngIf= "job.job.id == paramsId">
+    <div *ngIf="showSuccess" style="color: green;">
+      <h4 style="font-size: 18px;">Yenilənmə uğurla həyata keçirildi</h4>
+      <a routerLink = "/" class="btn btn-primary mt-3 w-100" >Back Home Page</a>
+      </div>
+    <div class="form-group mt-3">
+      <label>Jobs title</label>
+      <input type="text" class="form-control" value="{{job.job.title}}" #title/>
+    </div>
+    <div class="form-group mt-3">
+      <label>Company</label>
+      <input type="text" class="form-control" value="{{job.job.company}}" #company/>
+    </div>
+    <div class="form-group mt-3">
+      <label>Salary</label>
+      <input type="text" class="form-control" value="{{job.job.salary}}" #salary/>
+    </div>
+    <button class="btn btn-warning mt-3" (click)="update(job.fireId,job.job.id,job.job.time,title.value,company.value,salary.value)">Update Job</button>
+    <a routerLink = "/" class="btn btn-danger mx-3 mt-3" >Cancel</a>
+  </div>
+</div>

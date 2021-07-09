@@ -1,0 +1,17 @@
+<div class="w-100 h-100 d-flex justify-content-center align-items-center">
+  <div class="w-25">
+    <div class="form-group mt-3">
+      <label>Jobs title</label>
+      <input type="text" class="form-control" [(ngModel)] = "title" />
+    </div>
+    <div class="form-group mt-3">
+      <label>Company</label>
+      <input type="text" class="form-control" [(ngModel)] = "company"/>
+    </div>
+    <div class="form-group mt-3">
+      <label>Salary</label>
+      <input type="text" class="form-control" [(ngModel)] = "salary"/>
+    </div>
+    <button class="btn btn-primary mt-3" (click)="sendDatas()">Send Jobs</button>
+  </div>
+</div>

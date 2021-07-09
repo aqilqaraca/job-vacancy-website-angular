@@ -1,0 +1,14 @@
+<p>The newest</p>
+<div class="row mt-4 mb-5">
+  <div *ngFor = "let job of jobs.slice(jobs.length-9,jobs.length)" class="col-md-4 mt-4">
+    <div class="jobs__box">
+      <div class="title d-flex"><h4 style="color : #007bff">{{job.job.title}}</h4></div>
+      <div class="title d-flex"><h4>{{job.job.company}}</h4></div>
+      <button (click)="deleteJob(job.id,job.job.id)" class="delete btn btn-danger">Delete</button>
+        <ul>
+          <li><a routerLink="/jobs-details/{{job.job.id}}" href="">more information</a></li>
+          <li class="time_box"><i class="fa fa-clock-o"></i><p>{{job.job.time}}</p></li>
+        </ul>
+    </div>
+  </div>
+</div>
